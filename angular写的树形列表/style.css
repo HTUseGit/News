@@ -1,0 +1,93 @@
+*{font-size: 12px;margin: 0;padding: 0}
+.bar.bar-positive{  background-color: #58B6F7;  background-image: none;  }
+.hide{display: none;}
+.show{display: block;}
+.w{transform:rotate(90deg);transition:all 0.3s linear; display: inline-block;margin-left: .02rem;}
+.p_li{width: 90%;border-bottom: 1px solid #CACACA; font-size: .2rem;margin: 0 5%;}
+.p_li1{width: 90%;border-bottom: 1px solid #CACACA; font-size: .2rem;}
+.p_back{background: #b1ddfd;transform: translateX(-.2rem);transition:all .3s linear;width: 120%;padding: 0 6.5%}
+.p_back1{background: #dcedfb;transform: translateX(-.22rem);transition:all .3s linear;width: 120%;padding: 0 13.5%}
+.p_i{width: .11rem;height:.11rem; float: left;margin: .18rem .08rem 0 0;}
+.p_li2{position: relative;border-bottom: 1px solid #CACACA; width: 112%;  margin-left: -.25rem;}
+.p_li2 div{width: .07rem;height: .07rem;border-radius: .08rem;background-color:#2ea8fe; position: absolute;top: .19rem;  left: .03rem;  }
+.item-last{border: none;}
+
+#image{background: #000;}
+.paddingLfet{padding:.15rem 0 .15rem .16rem;}
+#image .fontCorlor{color: #fff; margin-bottom: 0;height: .15rem;}
+
+/*底部*/
+.p_fot{width: 25%;height:100%;float: left;text-align: center;line-height: 100%;color: #afb4bf;}
+.color{background: #1b2732;color: #267ab8;}
+.footImg{width: .30rem;height: .30rem;}
+.yi{display: none;width: .30rem;height: .30rem;margin-top: .03rem}
+.xian{display: block;width: .30rem;height: .30rem;}
+.jr{text-align: -webkit-center;margin-top: .03rem}
+/*底部*/
+/*自动播放部分*/
+.p_float{float: left;margin-right:.08rem;width: .25rem;height: .2rem;}
+.p_floatW{float: left;margin-right:.08rem;width: 58%;height: .2rem;background: #2f4050;border-radius: .1rem;position: relative;}
+.p_float-X{height: .2rem;border-radius: .1rem;background: #1FFEF6;position: absolute;}
+.p_floatx{width: 15%;height: .2rem;border-radius: .1rem;background: #2ea8fe;position: absolute;}
+.p_bfq{padding-left: .4rem;  margin-top: .2rem;}
+.windowWidthAndCenter{
+    color: #fff;text-align: center;font-size: .14rem;margin-bottom: 0;margin-top: .1rem;
+}
+/*自动播放部分*/
+
+/*自定义点进去部分*/
+.sr{background:#1b2732;width: 100%;height: .66rem;padding: .12rem 0;}
+.sr1{background:#1b2732;width: 100%;height: .66rem;padding: .12rem 0;}
+.sr_z{color: #fff;font-size: .14rem;padding-left: .25rem;width: 100%;}
+.sr_z li{float: left;border: 1px solid #9097a7;margin-right: .17rem;font-size: .14rem;padding: .03rem .07rem; }
+.inpu{float: left;  width: .5rem;  height: .25rem;  background: #1b2732;  margin-left: .06rem;}
+.but{background: #2ea8fe;  color: #fff;  border: none;  width: .5rem;  height: .25rem;margin-left: .07rem; border-radius: .05rem;}
+/*自定义点进去部分*/
+
+.dicomImageStyle{ padding: 0 .2rem;  width: 100%;height: 4rem;}
+/*滚动条*/
+.scro{background:#1b2732;width: 130%;height: .66rem;}
+.scro li{float: left;width:10%;height:.66rem;line-height:.66rem;}
+.scro li img{width:75%;margin-top: .07rem;margin-left:.07rem;}
+.bar-subfooter {  height: .66rem;  margin-bottom: 20px;}
+.bar button{ min-height: .25rem;  line-height: .25rem;padding:0;}
+.has-header{
+    top:.44rem;
+}
+.has-footer{
+    bottom:.64rem;
+}
+.bar-footer{
+    bottom:20px;
+}
+.bar .title {
+    height: .44rem;
+    font-size: .17rem;
+    line-height: .45rem;
+}
+.ion-ios-arrow-left:before {
+    font-size: .3rem;
+    margin-left: .12rem;
+    margin-top: .04rem;
+}
+/*6+的微调*/
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+    .sr1{ padding: .13rem 0;  }
+    .sr { padding: 0.11rem 0;  }
+    .p_li2 div{left: .05rem}
+}
+/*5的微调*/
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio : 2){
+    .p_i{ width: .11rem;height:.11rem; float: left;margin: .2rem .08rem 0 0;  }
+    .dicomImageStyle{margin-top: -.08rem;}
+    .windowWidthAndCenter {  margin-top: .06rem;}
+    .sr1 {  padding: .17rem 0; }
+    .sr {  padding: .17rem 0;  }
+}
+/*4的微调*/
+@media only screen and (device-height :480px) and (-webkit-device-pixel-ratio:2){
+    .p_i{ width: .11rem;height:.11rem; float: left;margin: .21rem .08rem 0 0;  }
+    .has-footer{  bottom:.8rem;}
+    .p_bfq { margin-bottom: .7rem;  }
+    .dicomImageStyle{margin-top: -.08rem;}
+}

@@ -1,0 +1,69 @@
+<html ng-app="ionicApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>菜鸟教程(runoob.com)</title>
+    <link href="ionic.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="fontsize.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="../js/ionic.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        angular.module('ionicApp', ['ionic'])
+            .controller('MyCtrl', function($scope,$http) {
+                $http.get("../json/package.json").success(function(data){
+                    $scope.mydate=data;
+                    var a;
+                    $scope.DataTitle=function (index) {
+                        a=index;
+                        jQuery('.p_li')[index].style.border="none";
+                        setInterval(function () {
+                            if(jQuery('.p_li')[index].offsetHeight<120&&index!=data.length-1){
+                                jQuery('.p_li')[index].style.borderBottom="1px solid #CACACA";
+                            }
+                        },100);
+                    };
+                    $scope.DateSubTitle=function (index) {
+                        jQuery('.p_li')[a].getElementsByClassName('p_li1')[index].style.border="none";
+                        setInterval(function () {
+                            if(jQuery('.p_li')[a].getElementsByClassName('p_li1')[index].offsetHeight<120&&index!=data[a].p.length-1){
+                                jQuery('.p_li')[a].getElementsByClassName('p_li1')[index].style.borderBottom="1px solid #CACACA";
+                            }
+                        },100);
+                    }
+
+                 })
+
+            });
+    </script>
+    <style>
+
+    </style>
+</head>
+<body ng-controller="MyCtrl">
+<div>
+    <ul style="background: #fff;">
+        <li ng-repeat="a in mydate" ng-click="DataTitle($index)"  class="p_li" ng-class="{'item-last':$last}" >
+            <i ng-class="{w:a.active}" ng-click="a.active=!a.active"><img style="width: .13rem;height: .13rem;" src="../images/right.png"></i>
+            <div style="display: inline-block;width: 90%;padding:.12rem 0 .12rem .03rem" ng-click="a.active=!a.active">
+                {{a.name}}
+            </div>
+            <ul class="hide p_back" ng-class="{show:a.active}">
+                <li ng-repeat="b in a.p" class="p_li1"  ng-click="DateSubTitle($index)" ng-class="{'item-last':$last}">
+                    <i ng-class="{hide:b.active}" ng-click="b.active=!b.active"><img class="p_i" src="../images/add.png"></i><i  ng-click="b.active=!b.active" class="hide" ng-class="{show:b.active}"><img class="p_i" src="../images/minus.png"></i>
+                    <div style="display: inline-block;width: 90%;padding:.12rem 0 .12rem .03rem" ng-click="b.active=!b.active">{{b.dc}}</div>
+                    <ul class="hide p_back1" ng-class="{show:b.active}">
+                        <li ng-click="pc($index)" class="p_li2" ng-class="{'item-last':$last}" ng-repeat="c in b.zhao" style="padding: .1rem 0;">
+                            <div></div>
+                            <p style="color: #000;margin: 0 .25rem;">{{c.pian}}</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
